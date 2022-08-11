@@ -1,0 +1,91 @@
+:root {
+    --bgColor1: #020122f5; /* 60% */
+    --bgColor2: #020126f5; /* 60% */
+    --color2: #3cd1c2; /* 30% */
+    --color2-variant: #26ffe9; /* 30% */
+    --Color3: #d9514eff; /* 10% */
+    --pText1: rgb(190, 190, 190);
+    /* font-size: clamp(MIN, VAL, MAX) https://developer.mozilla.org/en-US/docs/Web/CSS/clamp  */
+}
+
+
+.star {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    box-shadow: 0px 0px 20px white
+                1px 1px 10px var(--pText1)
+                2px 2px 10px white
+                3px 3px 10px var(--pText1);
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.star-1 {
+    left: 50px;
+    -webkit-animation: star-1-animation 35s infinite ease-in-out;
+    -moz-animation: star-1-animation 35s infinite ease-in-out;
+    -ms-animation: star-1-animation 35s infinite ease-in-out;
+    -o-animation: star-1-animation 35s infinite ease-in-out;
+    animation: star-1-animation 35s infinite ease-in-out;
+}
+
+
+@keyframes star-1-animation {
+    0% {
+        top: 0vh;
+        width: 1px;
+        height: 1px;
+        opacity: 0.5;
+    }
+    50% {
+        top: 100vh;
+        width: 4px;
+        height: 4px;
+        opacity: 0.8;
+    }
+    100% {
+        top: 0vh;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+}
+
+.star-2 {
+    right: 50px;
+    -webkit-animation: star-2-animation 35s infinite ease-in-out;
+    -moz-animation: star-2-animation 35s infinite ease-in-out;
+    -ms-animation: star-2-animation 35s infinite ease-in-out;
+    -o-animation: star-2-animation 35s infinite ease-in-out;
+    animation: star-2-animation 35s infinite ease-in-out;
+}
+@keyframes star-2-animation {
+    0% {
+        top: 100vh;
+        width: 1px;
+        height: 1px;
+        opacity: 0.5;
+    }
+    50% {
+        top: 0vh;
+        width: 4px;
+        height: 4px;
+        opacity: 0.8;
+    }
+    100% {
+        top: 100vh;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .star-1 {
+        left: 10px;
+    }
+    .star-2 {
+        right: 10px;
+    }
+}

@@ -1,0 +1,813 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+/* Imports */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: white;
+}
+
+/* --------------Start: Variable Declarations-------------- */
+:root {
+    --bgColor1: #020122f5; /* 60% */
+    --bgColor2: #020126f5; /* 60% */
+    --color2: #3cd1c2; /* 30% */
+    --color2-variant: #26ffe9; /* 30% */
+    --Color3: #d9514eff; /* 10% */
+    --pText1: rgb(190, 190, 190);
+    /* font-size: clamp(MIN, VAL, MAX) https://developer.mozilla.org/en-US/docs/Web/CSS/clamp  */
+}
+/* --------------End: Variable Declarations-------------- */
+
+
+
+
+
+
+
+/* --------------Start: Whole Project Stuff-------------- */
+a {
+    border-top: 1px solid transparent;
+    color: var(--color2);
+    transition: all 0.25s;
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color2-variant);
+}
+main a:hover {
+    border-top: 1px solid var(--color2-variant);
+    transition: border 0.25s ease-in-out;
+}
+
+
+ul:not(nav) {
+    list-style: none;
+}
+main ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    color: var(--color2);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+ul li {
+    font-size: clamp(12px, 14px, 16px);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color2);
+    width: 15%;
+    position: relative;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------Start: Navbar-------------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10000;
+    transition: top 0.25s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #020122c2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li a {
+    font-size: 12px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.active-logo {
+    color: var(--color2);
+    font-size: large;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+}
+.active-logo:hover {
+    color: var(--color2-variant);
+}
+@media screen and (max-width: 500px) {
+    nav ul {
+        justify-content: center;
+    }
+}
+
+/* making each lists item appear from the left 1 by 1 */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }    
+}
+nav ul li {
+    transform: translateX(-100vw);
+}
+nav ul li:nth-child(1) {
+    animation: slideIn 11s ease-in-out forwards;
+}
+nav ul li:nth-child(2) {
+    animation: slideIn 9s ease-in-out forwards;
+}
+nav ul li:nth-child(3) {
+    animation: slideIn 7s ease-in-out forwards;
+}
+nav ul li:last-child {
+    animation: slideIn 5s ease-in-out forwards;
+}
+
+/* --------------End: Navbar-------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start: Main Body */
+
+main [id] {
+    background-color: var(--bgColor1);
+    color: var(--pText1);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    scroll-margin-top: 50px;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+/* --------------Start: Home part--------------  */
+.moon{
+    background: linear-gradient(50deg, rgb(84, 84, 84), currentColor);
+    position:relative;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    box-shadow: 5px 0 10px 3px rgba(229, 229, 229, 0.24),
+                    0 0 10px 2px rgba(229,229,229,0.24),
+                    5px 0 10px 3px rgba(229,229,229,0.24),
+                    0px 0 3px 2px rgba(229,229,229,0.24);
+    margin: auto;
+    transform: translateX(-100%);
+    animation: moon-animation 7s ease-in-out forwards;
+}
+@keyframes moon-animation {
+    0% {
+        transform: translateX(-100%);
+        width: 0px;
+        height: 0px;
+    }
+    50% {
+        transform: translateX(15%);
+        width: 350px;
+        height: 350px;
+    }
+    100% {
+        transform: translateX(0%);
+        width: 270px;
+        height: 270px;
+    }
+}
+
+.moon::after{
+    content: "";
+    background-color: rgba(162, 162, 162, 0.774);
+    display: block;
+    position: absolute;
+    left:  160px;
+    top:  50px;
+    width: 40px;  
+    height: 40px;
+    border-radius:50%;
+    box-shadow: 0px 0 0 1px rgba(98, 98, 98, 0.51),
+                    0px 0px 0 -5px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -5px rgba(100, 100, 100, 0.51),
+                    0px 0px 0 -10px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -10px rgba(100, 100, 100, 0.51);
+    animation: moon-crates 9s ease-in-out forwards;
+}
+@keyframes moon-crates {
+    0% {
+        transform: translateX(-100%);
+        width: 0px;
+        height: 0px;
+        box-shadow: 0px 0 0 1px rgba(98, 98, 98, 0.51),
+                    0px 0px 0 -5px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -5px rgba(100, 100, 100, 0.51),
+                    0px 0px 0 -10px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -10px rgba(100, 100, 100, 0.51);
+    }
+    100% {
+        transform: translateX(0%);
+        width: 40px;  
+        height: 40px;
+        box-shadow: 3px 0 0 1px rgba(98, 98, 98, 0.51),
+                    7px 45px 0 -5px rgba(162, 162, 162, 0.9),
+                    9px 45px 0 -5px rgba(100, 100, 100, 0.51),
+                    35px 20px 0 -10px rgba(162, 162, 162, 0.9),
+                    37px 20px 0 -10px rgba(100, 100, 100, 0.51);
+    }
+}
+
+#home section {
+    padding: 0;
+    margin: 0;
+    height: 110vh;
+    animation: home-stars-animation 7s ease-in-out forwards;
+    /* background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 15px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        background-position: 0 0, 10px 60px, 130px 200px, 70px 150px; */
+}
+/* Make starts appear slowly */
+@keyframes home-stars-animation {
+    0% {
+        height: 0;
+        background-image:
+            radial-gradient(white, rgba(255,255,255,.2) 0px, transparent 15px),
+            radial-gradient(white, rgba(255,255,255,.15) 0px, transparent 5px),
+            radial-gradient(white, rgba(255,255,255,.1) 0px, transparent 15px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 0px, transparent 0px);
+        background-size: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+        background-position: 0 0, 0px 0px, 0px 0px, 0px 0px;
+    }
+    100% {
+        height: 110vh;
+        background-image:
+            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 15px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
+            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        background-position: 0 0, 10px 60px, 130px 200px, 70px 150px;
+    }
+}
+main h1 {
+    font-size: clamp(2.5vw, 3.5vw, 5.5vw);
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#home section h1  {
+    font-family: "Josefin Sans",sans-serif;
+    font-size: clamp(2.5vw, 3.5vw, 4.5vw);
+    font-weight: 100;
+    line-height: 1;
+    font-style: normal;
+    letter-spacing: 0.125em;
+    text-align: center;
+    text-transform: uppercase;
+}
+#home section h2  {
+    font-family: "Josefin Sans",sans-serif;
+    font-size: clamp(2.5vw, 3.5vw, 4.5vw);
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.125em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+
+
+/* for most of the h1s and h2s in the project*/
+
+
+
+main h1, main h2, footer h1 {
+    background: linear-gradient(to top, rgba(225, 225, 225, 0.8) 10%, white 50%, white 100%);
+    background: -webkit-linear-gradient(to top, rgba(225, 225, 225, 0.8) 10%, white 50%, white 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 5px rgba(225, 225, 225, 0.382);
+    font-size: clamp(20px, 26px, 4.5vw);
+}
+
+
+/* --------------End: Home part--------------  */
+
+
+
+
+
+
+
+
+
+
+
+/* --------------Start: About part--------------  */
+
+#about {
+    background: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2));
+}
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 50px 0;
+    }
+}
+#about h1 {
+    padding: 30px 0;
+}
+#about section {
+    background: transparent;
+    width: 80%;
+    height: fit-content;
+    max-height: fit-content;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--pText1);
+    padding: 30px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+#about section p {
+    font-size: clamp(12px, 14px, 16px);
+    padding: 10px 0;
+}
+#about section p:nth-child(odd) {
+    text-align: left;
+    padding-right: 100px;
+}
+#about section p:nth-child(even) {
+    text-align: right;
+    padding-left: 100px;
+}
+@media screen and (max-width: 400px) {
+    #about section {
+        padding: 50px 5px 50px 3px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #about section p:nth-child(odd), #about section p:nth-child(even) {
+        text-align: center;
+        padding: 0;
+    }
+    #about ul {
+        padding: 0;
+        font-size: small;
+    }
+    #about ul li {
+        padding: 5px 20px;
+    }
+}
+
+
+/* --------------End: About part--------------  */
+
+
+
+
+
+
+/* --------------Start: Projects-------------- */
+
+#projects {
+    background-color: var(--bgColor2);
+    padding: 0 0 100px 0;
+}
+#projects section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#projects .project-Item {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    padding: 50px 0;
+}
+#projects a {
+    border: none;
+}
+#projects a:hover {
+    border: none;
+}
+
+
+
+
+
+.project-Item .rightItem, .project-Item .leftItem {
+    border: 1px solid #3cd1c2c9;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(32, 32, 32, 0.842);
+}
+.project-Item .rightItem::after, .project-Item .leftItem::after {
+    box-shadow: 5px 5px 5px white;
+}
+
+
+
+/* --------------Start: Project Picture-------------- */
+.project-Item .leftItem {
+    border-radius: 3px 0 0 3px;
+    padding: 0;
+    grid-row: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.project-Item .leftItem:nth-child(odd) {
+    border-radius: 3px 10% 10% 3px;
+    border-right: 0px;
+    grid-column: 1 /  5;
+}
+
+.project-Item .leftItem:nth-child(even) {
+    border-radius: 10% 3px 3px 10%;
+    border-left: 0px;
+    grid-column: 6 /  10;
+}
+.project-Item .leftItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.leftItem .img-leftItem {
+    display: block;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/Adorned.jpg);
+    background-color: #1d4c47b1;
+    background-blend-mode:darken;
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: movingPicutre 10s ease-in-out infinite;
+    background-position: right;
+    transition: all 0.3s;
+}
+.leftItem .img-leftItem:hover {
+    background-color: #09e8d200; 
+        background-blend-mode:darken;
+        background-size: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all 0.3s;
+        cursor: pointer;
+}
+@keyframes movingPicutre {
+    0% {
+        background-position: right;
+    }
+    50% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+    
+}
+/* --------------End: Project Picture-------------- */
+
+
+
+
+
+
+/* --------------Start: Project Explanation-------------- */
+.project-Item .rightItem {
+    margin: 20px 0!important;
+    right: 50px;
+    border-radius: 0px 5px 5px 0px;
+    display: grid;
+    grid-template-rows: fit-content fit-content 1fr fit-content;
+    grid-column: 4 / 10;
+    grid-row: 1;
+    z-index: 3;
+    font-size: medium;
+    background: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2));
+}
+.project-Item .rightItem:nth-child(even) {
+    border-radius: 0px 5px 5px 0px;
+    border-left: 0px;
+    grid-column: 4 / 10;
+}
+.project-Item .rightItem:nth-child(odd) {
+    border-radius: 5px 0px 0px 5px;
+    border-right: 0px;
+    grid-column: 1 / 7;
+}
+
+.project-Item .rightItem * {
+    font-size: 20px;
+}
+.project-Item .rightItem h3 {
+    font-size: clamp(14px, 16px, 18px);
+    font-weight: bold;
+    color: var(--pText1);
+    text-transform: uppercase;
+    margin: 0;
+}
+.project-Item .rightItem p {
+    font-size: clamp(12px, 14px, 16px);
+    color: var(--pText1);
+}
+.project-Item .rightItem p:last-child {
+    color: rgba(195, 195, 195, 0.608);
+}
+
+
+@media  screen and (max-width: 500px) {
+    .project-Item {
+        width: 100%;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .project-Item .leftItem,.project-Item .leftItem:nth-child(odd), .project-Item .leftItem:nth-child(even) {  
+        grid-row: 1 / 3;
+        grid-column: 1 / 10;
+        height: 150px;
+        border-radius: 3px;
+        border: 1px solid #3cd1c2c9;
+        border-bottom: none;
+    }
+    .project-Item .rightItem, .project-Item .rightItem:nth-child(even), .project-Item .rightItem:nth-child(odd) {
+        grid-row: 2 / 5;
+        grid-column: 1 / 10;
+        border-radius: 3px;
+        border: 1px solid #3cd1c2c9;
+        border-top: none;
+    }
+    .project-Item .rightItem * {
+        font-size: 16px;
+    }
+    .project-Item .rightItem h3 {
+        font-size: clamp(12px, 14px, 16px);
+    }
+    .project-Item .rightItem p {
+        font-size: clamp(10px, 12px, 14px);
+        color: var(--pText1);
+    }
+}
+@media screen and (max-width: 400px) {
+    #projects section {
+        width: 85%;
+    }
+}
+    
+/* --------------End: Project Explanation-------------- */
+
+
+
+
+
+/* --------------Start: Small Projects-------------- */
+.small-project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 15px;
+}
+.small-project-cont {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    border: 1px solid var(--color2);
+    background: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2));
+    border-radius: 3px;
+    box-shadow: 0px 4px 6px rgba(32, 32, 32, 0.842);
+    color: rgba(190, 190, 190, 0.538);
+}
+.small-project-cont:hover {
+    color: rgb(190, 190, 190);
+    cursor: pointer;
+}
+.sp-title {
+    grid-row: 1;
+    border-bottom: 1px solid var(--color2);
+    font-size: clamp(14px, 16px, 20px);
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.sp-title p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    font-weight: bold;
+    transform: translateY(20%);
+}
+.sp-title:hover {
+    color: var(--color2);
+    transition: all 0.3s ease-in-out;
+}
+.sp-contents {
+    grid-row: 2 / 6;
+    font-size: clamp(10px, 12px, 14px);
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* --------------End: Small Projects-------------- */
+
+
+
+
+
+
+
+/* End: Projects */
+
+
+
+
+
+/* End: Main Body */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start: Footer */
+#contact {
+    background-color: var(--bgColor2);
+    min-height: 30vh;
+    padding: 0;
+    margin: 0;
+    color: var(--pText1);
+}
+#contact h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+#contact .foot-Button-sec {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 30px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    display: grid;
+    place-content: center;
+}
+#contact button {
+    background-color: var(--bgColor1);
+    color: var(--pText1);
+    border: 1px solid var(--color2);
+    border-radius: 3px;
+    padding: 10px;
+    font-size: clamp(12px, 14px, 16px);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+}
+#contact button:hover {
+    background-color: var(--color2);
+    color: var(--bgColor1);
+    transition: all 0.3s ease-in-out;
+}
+#contact .social-Media-Container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: clamp(10px, 12px, 14px);
+    padding: 10px 0;
+}
+#contact .social-Media-Container a {
+    text-align: center;
+}
+
+
+/* End: Footer */
