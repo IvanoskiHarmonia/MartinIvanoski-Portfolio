@@ -15,7 +15,7 @@
 * [Forking](#forking)
 
 
-* [Colors](#colors)) 
+* [Colors](#colors)
 
 ---
 
