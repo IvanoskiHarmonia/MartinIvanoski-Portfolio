@@ -39,5 +39,9 @@ Just to repeat what I said before: please if you are trying to fork my portfolio
 ## Colors
 
 primary: #020122f5
+
+
 secondary: #3cd1c2
+
+
 tertiary: rgb(190, 190, 190)
