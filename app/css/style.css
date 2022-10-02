@@ -521,13 +521,13 @@ main h1, main h2, footer h1 {
     overflow: hidden;
 }
 .project-Item .leftItem:nth-child(odd) {
-    border-radius: 3px 10% 10% 3px;
+    border-radius: 3px 4px 4px 3px;
     border-right: 0px;
     grid-column: 1 /  5;
 }
 
 .project-Item .leftItem:nth-child(even) {
-    border-radius: 10% 3px 3px 10%;
+    border-radius: 4px 3px 3px 4px;
     border-left: 0px;
     grid-column: 6 /  10;
 }
