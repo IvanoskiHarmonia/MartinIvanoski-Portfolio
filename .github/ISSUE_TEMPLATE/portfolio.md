@@ -1,7 +1,7 @@
 ---
-name: 'MIPO-#:'
+name: Portfolio
 about: Describe this issue template's purpose here.
-title: ''
+title: 'MIPO-#: Short Description'
 labels: ''
 assignees: IvanoskiHarmonia
 
