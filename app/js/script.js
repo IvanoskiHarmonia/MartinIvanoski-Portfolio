@@ -9,8 +9,6 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
-
-// redirect to project page
 function redirect(link) {
   window.open(link, '_blank');
 }
