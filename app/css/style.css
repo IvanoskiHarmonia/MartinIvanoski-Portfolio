@@ -1,8 +1,4 @@
-/* Imports */
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-
-/* Imports */
 
 html, body {
     margin: 0;
@@ -14,10 +10,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: white;
+    background-color: var(--bgColor2);
 }
 
-/* --------------Start: Variable Declarations-------------- */
 :root {
     --bgColor1: #020122f5; /* 60% */
     --bgColor2: #020126f5; /* 60% */
@@ -25,17 +20,8 @@ body {
     --color2-variant: #26ffe9; /* 30% */
     --Color3: #d9514eff; /* 10% */
     --pText1: rgb(190, 190, 190);
-    /* font-size: clamp(MIN, VAL, MAX) https://developer.mozilla.org/en-US/docs/Web/CSS/clamp  */
 }
-/* --------------End: Variable Declarations-------------- */
 
-
-
-
-
-
-
-/* --------------Start: Whole Project Stuff-------------- */
 a {
     border-top: 1px solid transparent;
     color: var(--color2);
@@ -79,42 +65,6 @@ hr {
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --------------Start: Navbar-------------- */
 nav {
     position: fixed;
     top: 0;
@@ -159,7 +109,6 @@ nav ul li a {
     }
 }
 
-/* making each lists item appear from the left 1 by 1 */
 @keyframes slideIn {
     0% {
         transform: translateX(-100vw);
@@ -184,30 +133,6 @@ nav ul li:last-child {
     animation: slideIn 5s ease-in-out forwards;
 }
 
-/* --------------End: Navbar-------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Start: Main Body */
-
 main [id] {
     background-color: var(--bgColor1);
     color: var(--pText1);
@@ -219,15 +144,6 @@ main [id] {
     z-index: 10;
 }
 
-
-
-
-
-
-
-
-
-/* --------------Start: Home part--------------  */
 .moon{
     background: linear-gradient(50deg, rgb(84, 84, 84), currentColor);
     position:relative;
@@ -263,7 +179,6 @@ main [id] {
         height: 270px;
     }
 }
-
 .moon::after{
     content: "";
     background-color: rgba(162, 162, 162, 0.774);
@@ -303,7 +218,6 @@ main [id] {
                     37px 20px 0 -10px rgba(100, 100, 100, 0.51);
     }
 }
-
 #home section {
     padding: 0;
     margin: 0;
@@ -317,14 +231,8 @@ main [id] {
         background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
         background-position: 0 0, 10px 60px, 130px 200px, 70px 150px; 
 }
-/* Make starts appear slowly */
 @keyframes home-stars-animation {
     0% {
-        /* background-image:
-            radial-gradient(white, rgba(255,255,255,.2) 0px, transparent 0px),
-            radial-gradient(white, rgba(255,255,255,.15) 0px, transparent 0px),
-            radial-gradient(white, rgba(255,255,255,.1) 0px, transparent 0px),
-            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 0px, transparent 0px); */
             background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
             background-position: 0 0, 0px 0px, 0px 0px, 0px 0px; 
     }
@@ -332,11 +240,6 @@ main [id] {
         background-position: 0 0, 15px 80px, 150px 230px, 90px 180px; 
     }
     100% {
-        /* background-image:
-            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 15px),
-            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
-            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px),
-            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px); */
             background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
             background-position: 0 0, 10px 60px, 130px 200px, 70px 150px; 
     }
@@ -371,15 +274,6 @@ main h1 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-
-
-
-
-
-/* for most of the h1s and h2s in the project*/
-
-
-
 main h1, main h2, footer h1 {
     background: linear-gradient(to top, rgba(225, 225, 225, 0.8) 10%, white 50%, white 100%);
     background: -webkit-linear-gradient(to top, rgba(225, 225, 225, 0.8) 10%, white 50%, white 100%);
@@ -389,21 +283,6 @@ main h1, main h2, footer h1 {
     text-shadow: 0px 2px 5px rgba(225, 225, 225, 0.382);
     font-size: clamp(20px, 26px, 4.5vw);
 }
-
-
-/* --------------End: Home part--------------  */
-
-
-
-
-
-
-
-
-
-
-
-/* --------------Start: About part--------------  */
 
 #about {
     background: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2));
@@ -458,19 +337,9 @@ main h1, main h2, footer h1 {
     }
 }
 
-
-/* --------------End: About part--------------  */
-
-
-
-
-
-
-/* --------------Start: Projects-------------- */
-
 #projects {
     background-color: var(--bgColor2);
-    padding: 0 0 100px 0;
+    padding: 0;
 }
 #projects section {
     width: 80%;
@@ -492,11 +361,6 @@ main h1, main h2, footer h1 {
 #projects a:hover {
     border: none;
 }
-
-
-
-
-
 .project-Item .rightItem, .project-Item .leftItem {
     border: 1px solid #3cd1c2c9;
     padding: 10px;
@@ -506,10 +370,6 @@ main h1, main h2, footer h1 {
 .project-Item .rightItem::after, .project-Item .leftItem::after {
     box-shadow: 5px 5px 5px white;
 }
-
-
-
-/* --------------Start: Project Picture-------------- */
 .project-Item .leftItem {
     border-radius: 3px 0 0 3px;
     padding: 0;
@@ -572,14 +432,6 @@ main h1, main h2, footer h1 {
     }
     
 }
-/* --------------End: Project Picture-------------- */
-
-
-
-
-
-
-/* --------------Start: Project Explanation-------------- */
 .project-Item .rightItem {
     margin: 20px 0!important;
     right: 50px;
@@ -620,8 +472,6 @@ main h1, main h2, footer h1 {
 .project-Item .rightItem p:last-child {
     color: rgba(195, 195, 195, 0.608);
 }
-
-
 @media  screen and (max-width: 500px) {
     .project-Item {
         width: 100%;
@@ -658,41 +508,7 @@ main h1, main h2, footer h1 {
         width: 85%;
     }
 }
-    
-/* --------------End: Project Explanation-------------- */
 
-
-
-
-/* End: Projects */
-
-
-
-/* End: Main Body */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Start: Footer */
 #contact {
     background-color: var(--bgColor2);
     min-height: 30vh;
@@ -744,6 +560,3 @@ main h1, main h2, footer h1 {
 #contact .social-Media-Container a {
     text-align: center;
 }
-
-
-/* End: Footer */

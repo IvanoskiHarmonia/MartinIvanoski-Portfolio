@@ -5,7 +5,6 @@
     --color2-variant: #26ffe9; /* 30% */
     --Color3: #d9514eff; /* 10% */
     --pText1: rgb(190, 190, 190);
-    /* font-size: clamp(MIN, VAL, MAX) https://developer.mozilla.org/en-US/docs/Web/CSS/clamp  */
 }
 
 
