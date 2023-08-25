@@ -10,17 +10,25 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: #020120;
+    background-color: var(--bgColor1);
+}
+body [id] {
+    position: relative;
+    z-index: 10;
 }
 
+
+
 :root {
-    --bgColor1: #020122f5; /* 60% */
+    --bgColor1: hsla(242, 94%, 2%, 1); /* 60% */
     --bgColor2: #020126f5; /* 60% */
     --color2: #3cd1c2; /* 30% */
     --color2-variant: #26ffe9; /* 30% */
     --Color3: #d9514eff; /* 10% */
     --pText1: rgb(190, 190, 190);
 }
+
+
 
 a {
     border-top: 1px solid transparent;
@@ -38,6 +46,9 @@ main a:hover {
     border-top: 1px solid var(--color2-variant);
     transition: border 0.25s ease-in-out;
 }
+
+
+
 
 
 ul:not(nav) {
@@ -81,10 +92,13 @@ nav ul {
     padding: 0;
     overflow: hidden;
     height: 100%;
-    background-color: #020122c2;
+    background-color: hsla(242, 94%, 7%, 0.100);
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+nav ul:hover {
+    background-color: hsla(242, 94%, 7%, 1);
 }
 nav ul li a {
     font-size: 12px;
@@ -133,117 +147,19 @@ nav ul li:last-child {
     animation: slideIn 5s ease-in-out forwards;
 }
 
+
+
+
+
 main [id] {
-    background-color: var(--bgColor1);
     color: var(--pText1);
     padding: 0;
     margin: 0;
     width: 100%;
     min-height: 100vh;
     scroll-margin-top: 50px;
-    z-index: 10;
 }
 
-.moon{
-    background: linear-gradient(50deg, rgb(84, 84, 84), currentColor);
-    position:relative;
-    top: -100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    box-shadow: 5px 0 10px 3px rgba(229, 229, 229, 0.24),
-                    0 0 10px 2px rgba(229,229,229,0.24),
-                    5px 0 10px 3px rgba(229,229,229,0.24),
-                    0px 0 3px 2px rgba(229,229,229,0.24);
-    margin: auto;
-    transform: translateX(-100%);
-    animation: moon-animation 7s ease-in-out forwards;
-}
-@keyframes moon-animation {
-    0% {
-        transform: translateX(-100%);
-        width: 0px;
-        height: 0px;
-    }
-    50% {
-        transform: translateX(15%);
-        width: 350px;
-        height: 350px;
-    }
-    100% {
-        transform: translateX(0%);
-        width: 270px;
-        height: 270px;
-    }
-}
-.moon::after{
-    content: "";
-    background-color: rgba(162, 162, 162, 0.774);
-    display: block;
-    position: absolute;
-    left:  160px;
-    top:  50px;
-    width: 40px;  
-    height: 40px;
-    border-radius:50%;
-    box-shadow: 0px 0 0 1px rgba(98, 98, 98, 0.51),
-                    0px 0px 0 -5px rgba(162, 162, 162, 0.9),
-                    0px 0px 0 -5px rgba(100, 100, 100, 0.51),
-                    0px 0px 0 -10px rgba(162, 162, 162, 0.9),
-                    0px 0px 0 -10px rgba(100, 100, 100, 0.51);
-    animation: moon-crates 9s ease-in-out forwards;
-}
-@keyframes moon-crates {
-    0% {
-        transform: translateX(-100%);
-        width: 0px;
-        height: 0px;
-        box-shadow: 0px 0 0 1px rgba(98, 98, 98, 0.51),
-                    0px 0px 0 -5px rgba(162, 162, 162, 0.9),
-                    0px 0px 0 -5px rgba(100, 100, 100, 0.51),
-                    0px 0px 0 -10px rgba(162, 162, 162, 0.9),
-                    0px 0px 0 -10px rgba(100, 100, 100, 0.51);
-    }
-    100% {
-        transform: translateX(0%);
-        width: 40px;  
-        height: 40px;
-        box-shadow: 3px 0 0 1px rgba(98, 98, 98, 0.51),
-                    7px 45px 0 -5px rgba(162, 162, 162, 0.9),
-                    9px 45px 0 -5px rgba(100, 100, 100, 0.51),
-                    35px 20px 0 -10px rgba(162, 162, 162, 0.9),
-                    37px 20px 0 -10px rgba(100, 100, 100, 0.51);
-    }
-}
-#home section {
-    padding: 0;
-    margin: 0;
-    height: 110vh;
-    animation: home-stars-animation 7s ease-in-out forwards;
-    background-image:
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 15px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px),
-        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px);
-        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-        background-position: 0 0, 10px 60px, 130px 200px, 70px 150px; 
-}
-@keyframes home-stars-animation {
-    0% {
-            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-            background-position: 0 0, 0px 0px, 0px 0px, 0px 0px; 
-    }
-    50% {
-        background-position: 0 0, 15px 80px, 150px 230px, 90px 180px; 
-    }
-    100% {
-            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-            background-position: 0 0, 10px 60px, 130px 200px, 70px 150px; 
-    }
-}
 main h1 {
     font-size: clamp(2.5vw, 3.5vw, 5.5vw);
     font-weight: bold;
@@ -251,24 +167,23 @@ main h1 {
     margin: 0;
     padding: 0;
 }
-#home section h1  {
+#home section h1, #home section h2 {
     font-family: "Josefin Sans",sans-serif;
     font-size: clamp(2.5vw, 3.5vw, 4.5vw);
-    font-weight: 100;
-    line-height: 1;
     font-style: normal;
-    letter-spacing: 0.125em;
     text-align: center;
     text-transform: uppercase;
 }
+#home section h1  {
+    margin-top: 10vh;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: 0.125em;
+}
 #home section h2  {
-    font-family: "Josefin Sans",sans-serif;
-    font-size: clamp(2.5vw, 3.5vw, 4.5vw);
     font-weight: bold;
     font-style: normal;
     letter-spacing: 0.125em;
-    text-align: center;
-    text-transform: uppercase;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
@@ -284,9 +199,10 @@ main h1, main h2, footer h1 {
     font-size: clamp(20px, 26px, 4.5vw);
 }
 
-#about {
-    background: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2));
-}
+
+
+
+
 @media screen and (max-width: 768px) {
     #about {
         padding: 50px 0;
@@ -337,8 +253,11 @@ main h1, main h2, footer h1 {
     }
 }
 
+
+
+
+
 #projects {
-    background-color: var(--bgColor2);
     padding: 0;
 }
 #projects section {
@@ -509,8 +428,10 @@ main h1, main h2, footer h1 {
     }
 }
 
+
+
+
 #contact {
-    background-color: var(--bgColor2);
     min-height: 30vh;
     padding: 0;
     margin: 0;
