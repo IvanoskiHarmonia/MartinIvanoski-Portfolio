@@ -20,7 +20,6 @@
     border-radius: 50%;
     z-index: 1;
 }
-
 .star-1 {
     left: 50px;
     -webkit-animation: star-1-animation 35s infinite ease-in-out;
@@ -29,7 +28,14 @@
     -o-animation: star-1-animation 35s infinite ease-in-out;
     animation: star-1-animation 35s infinite ease-in-out;
 }
-
+.star-2 {
+    right: 50px;
+    -webkit-animation: star-2-animation 35s infinite ease-in-out;
+    -moz-animation: star-2-animation 35s infinite ease-in-out;
+    -ms-animation: star-2-animation 35s infinite ease-in-out;
+    -o-animation: star-2-animation 35s infinite ease-in-out;
+    animation: star-2-animation 35s infinite ease-in-out;
+}
 
 @keyframes star-1-animation {
     0% {
@@ -52,14 +58,6 @@
     }
 }
 
-.star-2 {
-    right: 50px;
-    -webkit-animation: star-2-animation 35s infinite ease-in-out;
-    -moz-animation: star-2-animation 35s infinite ease-in-out;
-    -ms-animation: star-2-animation 35s infinite ease-in-out;
-    -o-animation: star-2-animation 35s infinite ease-in-out;
-    animation: star-2-animation 35s infinite ease-in-out;
-}
 @keyframes star-2-animation {
     0% {
         top: 100vh;
@@ -87,4 +85,96 @@
     .star-2 {
         right: 10px;
     }
+}
+
+.moon {
+    background: linear-gradient(50deg, rgb(84, 84, 84), currentColor);
+    position:relative;
+    top: 55px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    box-shadow: 5px 0 50px 3px rgba(229, 229, 229, 0.24),
+                    5px 0 50px 2px rgba(229,229,229,0.24),
+                    0px 0 0 0px rgba(229,229,229,0.24),
+                    0px 25px 50px 2px rgba(229,229,229,0.24);
+    margin: auto;
+    transform: translateX(-100%);
+    animation: moon-spawn 7s ease-in-out forwards;
+}
+@keyframes moon-spawn {
+    0% {
+        transform: translateX(-100%);
+        width: 0px;
+        height: 0px;
+    }
+    50% {
+        transform: translateX(15%);
+        width: 350px;
+        height: 350px;
+    }
+    100% {
+        transform: translateX(0%);
+        width: 270px;
+        height: 270px;
+    }
+}
+.moon::after{
+    content: "";
+    background-color: rgba(162, 162, 162, 0.774);
+    display: block;
+    position: absolute;
+    left:  160px;
+    top:  50px;
+    width: 40px;  
+    height: 40px;
+    border-radius:50%;
+    box-shadow: 0px 0 0 1px rgba(98, 98, 98, 0.51),
+                    0px 0px 0 -5px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -5px rgba(100, 100, 100, 0.51),
+                    0px 0px 0 -10px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -10px rgba(100, 100, 100, 0.51);
+    animation: moon-crates 9s ease-in-out forwards;
+}
+@keyframes moon-crates {
+    0% {
+        transform: translateX(-100%);
+        width: 0px;
+        height: 0px;
+        box-shadow: 0px 0 0 1px rgba(98, 98, 98, 0.51),
+                    0px 0px 0 -5px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -5px rgba(100, 100, 100, 0.51),
+                    0px 0px 0 -10px rgba(162, 162, 162, 0.9),
+                    0px 0px 0 -10px rgba(100, 100, 100, 0.51);
+    }
+    100% {
+        transform: translateX(0%);
+        width: 40px;  
+        height: 40px;
+        box-shadow: 3px 0 0 1px rgba(98, 98, 98, 0.51),
+                    7px 45px 0 -5px rgba(162, 162, 162, 0.9),
+                    9px 45px 0 -5px rgba(100, 100, 100, 0.51),
+                    35px 20px 0 -10px rgba(162, 162, 162, 0.9),
+                    37px 20px 0 -10px rgba(100, 100, 100, 0.51);
+    }
+}
+#background-stars {
+    position: fixed !important;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-image: /* Stars */
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 15px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px);  
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 0px 0px, 0px 0px, 0px 0px;
+    z-index: 0 !important;
 }
