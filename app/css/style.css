@@ -383,7 +383,7 @@ footer h1 {
   color: var(--pText1);
 }
 .project-Item .rightItem p:last-child {
-  color: rgba(195, 195, 195, 0.608);
+  color: rgba(220, 220, 220, 0.722);
 }
 @media screen and (max-width: 500px) {
   .project-Item {
