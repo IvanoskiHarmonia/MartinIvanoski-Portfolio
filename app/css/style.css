@@ -220,7 +220,7 @@ footer h1 {
   font-family: "Kdam Thmor Pro", sans-serif;
 }
 #about section p {
-  font-size: clamp(14px, 16px, 18px);
+  font-size: clamp(15px, 17px, 19px);
   padding: 10px 0;
 }
 #about section p:nth-child(odd) {
