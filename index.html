@@ -1,127 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
-    <link rel="shortcut icon" href="./app/images/logo/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="app/css/style.css">
-    <link rel="stylesheet" href="app/css/animations.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Martin Ivanoski - Portfolio</title>
-</head>
-<body>
-    <header>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home" class="active-logo">MI</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="star star-1"></div>
-    <div class="star star-2"></div>
-    <div id="background-stars"></div>
-
-    <main>
-        <div id="home">
-            <section>
-                <div class="moon"></div>
-                <h1>Martin Ivanoski</h1>
-                <h2>Software Developer</h2>
-            </section>
-            <hr>
-        </div>
-
-        <div id="about">
-            <h1>ABOUT</h1>
-                <section>    
-                    <p>
-                        Hey! My name is Martin and I enjoy building things that help people be more efficient. My passion for software development comes from my love for creating things from scratch and my continuous quest to solve complex problems. I am always eager to learn new technologies and methodologies to better myself both professionally and personally.
-                    </p>
-                    <p>
-                        I am a proud graduate of <a href="https://www.fiu.edu/" target="_blank">Florida International University</a> with a Bachelor’s degree in Computer Science. Now, as I embark on my professional journey, I'm focused on applying my skills in real-world scenarios and making a positive impact through technology.
-                    </p>
-                    <p>
-                        Here are some technologies I've been working with recently:
-                    </p>
-                    <ul>
-                        <li>Java</li>
-                        <li>Spring Framework</li>
-                        <li>React.js</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <br>
-                    <p>In my free time, I like to stay active with sports and unwind with a good book. I'm always up for a new fitness challenge and enjoy reading anything that helps me grow personally or learn more about business.</p>
-                    <p>Here are my last reads:<br>
-                        <ul>
-                            <li><a href="https://www.amazon.com/Comfort-Crisis-Embrace-Discomfort-Reclaim/dp/0593138767/ref=sr_1_1?crid=3QDEBQV14GJ56&keywords=comfort+crisis+book+michael+easter&qid=1704333489&sprefix=Comfort+Crisis+%2Caps%2C133&sr=8-1" target="_blank">The Comfort Crisis</a> - This book is a masterpiece of explaining why doing uncomfortable things matters, and it has improved my livelyhood a lot.</li>
-                            <li><a href="https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X/ref=sr_1_1?crid=GZL1FTO2P39C&keywords=The+Power+of+habit&qid=1704333581&sprefix=the+power+of+habit%2Caps%2C142&sr=8-1" target="_blank">Atomic Habits</a> - This book provided invaluable insights into habit formation and efficiency, guiding me in structuring my days for maximum productivity.</li>
-                        </ul>
-                    </p>
-                </section>
-        </div>
-
-        <div id="projects">
-            <hr>
-            <h1>Projects</h1>
-            <section> 
-                <div class="project-Item">
-                    <div class="leftItem">
-                        <div class="img-leftItem" onclick="redirect('https://github.com/IvanoskiHarmonia/quiz-service')"></div>
-                    </div>
-                    <div class="rightItem">
-                        <h3>StudySprint</h3>
-                        <p>Revolutionize your learning experience with our dynamic quiz app, where personalized difficulty and diverse subject options create a uniquely engaging and effective knowledge journey!</p>
-                        <div>
-                            <a style="margin-right: 40px;" href="https://github.com/IvanoskiHarmonia/quiz-service" target="_blank"><i class='fab fa-github fa-2x'></i></a>
-                            <a href="https://github.com/IvanoskiHarmonia/quiz-service-frontend" target="_blank"><i class='fab fa-github fa-2x'></i></a>
-                        </div>
-                        <p>Frameworks/Tools Used: Java, Spring, React, RESTful API, H2 Database, SonarQube, GitHub Actions/Projects, NPM, Gradle</p>
-                    </div>
-                </div>
-
-                <div class="project-Item">
-                    <div class="rightItem">
-                        <h3>Bookstore API</h3>
-                        <p>Your one-stop solution to manage, browse, and purchase books with our API</p>
-                        <div>
-                            <a href="https://github.com/Software-Engineering-1-Group-13/Bookstore-API" target="_blank"><i class='fab fa-github fa-2x'></i></a>
-                        </div>
-                        <p>Frameworks/Tools Used: Java, Spring, RESTful API, H2 Database, SonarQube, GitHub Actions/Projects, Gradle</p>
-                    </div>
-                    <div class="leftItem">
-                        <div class="img-leftItem" style="background-image: url(./app/images/API.png)" onclick="redirect('https://github.com/Software-Engineering-1-Group-13/Bookstore-API')"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main> 
-
-    <footer>
-        <div id="contact">
-            <hr>
-            <h1>Reach Out</h1>
-            <section class="foot-Button-sec">
-                <a href="mailto:macohiho@gmail.com">
-                    <button>Get in Touch</button>
-                </a>
-            </section>
-
-            <section class="social-Media-Container">
-                <a href="https://github.com/IvanoskiHarmonia" target="_blank"><i class='fab fa-github fa-2x'></i></a>
-            </section>
-        </div>
-    </footer>
-
-    <script src="app/js/script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Martin Ivanoski Portfolio</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>
