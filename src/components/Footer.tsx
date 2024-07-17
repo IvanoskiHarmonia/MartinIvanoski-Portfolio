@@ -26,7 +26,7 @@ export default function Footer() {
 			<Container maxWidth="sm">
 				<Typography variant="body1">
 					Please connect with me on{" "}
-					<Link href="https://www.linkedin.com/">
+					<Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
 						LinkedIn
 						<LinkedIn fontSize="small" />
 					</Link>
