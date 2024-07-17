@@ -1,10 +1,12 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import StyleWrapper from "./utils/StyleWrapper";
 
 function App() {
 	return (
-		<p>
-			This is the start of my portfolio project. will be <strong>available</strong> on Jul 19th, 2024
-		</p>
+		<StyleWrapper>
+			<Footer />
+		</StyleWrapper>
 	);
 }
 
