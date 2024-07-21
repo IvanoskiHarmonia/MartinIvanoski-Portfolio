@@ -87,6 +87,4 @@ export const techStack = [
 	{ name: "Jira", icon: SiJira },
 	{ name: "Maven", icon: SiApachemaven },
 	{ name: "Gradle", icon: SiGradle },
-
-	// Add more tech stack items as needed
 ];

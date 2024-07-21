@@ -26,19 +26,19 @@ export const TechStackSlider: React.FC<TechStackSliderProps> = ({ stack }) => {
 		pauseOnHover: false,
 		responsive: [
 			{
-				breakpoint: 1024, // Adjust the number of slides for medium screens
+				breakpoint: 1024,
 				settings: {
 					slidesToShow: 5,
 				},
 			},
 			{
-				breakpoint: 600, // Adjust the number of slides for small screens
+				breakpoint: 600,
 				settings: {
 					slidesToShow: 4,
 				},
 			},
 			{
-				breakpoint: 480, // Adjust the number of slides for very small screens
+				breakpoint: 480,
 				settings: {
 					slidesToShow: 3,
 				},
