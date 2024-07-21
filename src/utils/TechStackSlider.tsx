@@ -17,12 +17,33 @@ interface TechStackSliderProps {
 export const TechStackSlider: React.FC<TechStackSliderProps> = ({ stack }) => {
 	const settings = {
 		infinite: true,
-		speed: 500,
-		slidesToShow: 5,
+		speed: 650,
+		slidesToShow: 6,
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,
-		cssEase: "linear",
+		cssEase: "ease-in-out",
+		pauseOnHover: false,
+		responsive: [
+			{
+				breakpoint: 1024, // Adjust the number of slides for medium screens
+				settings: {
+					slidesToShow: 5,
+				},
+			},
+			{
+				breakpoint: 600, // Adjust the number of slides for small screens
+				settings: {
+					slidesToShow: 4,
+				},
+			},
+			{
+				breakpoint: 480, // Adjust the number of slides for very small screens
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+		],
 	};
 
 	return (

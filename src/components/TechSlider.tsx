@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { TechStackSlider } from "../utils/TechStackSlider";
 import { techStack } from "../utils/data";
 
