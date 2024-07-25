@@ -27,8 +27,7 @@ export const projects = [
 	{
 		name: "OCP",
 		image: "projects/OCP.png",
-		details:
-			"This project provides a robust web-based platform for companies to host their own career pages, allowing users to browse job listings and apply directly from the website.",
+		details: "Web platform for hosting career pages and job listings.",
 		stack: ["React 18", "Node.js", "Express", "MongoDB (Local, Atlas)"],
 		demoLink: "#",
 		repoLink: "https://github.com/IvanoskiHarmonia/open-career-portal",
@@ -36,25 +35,24 @@ export const projects = [
 	{
 		name: "StudySprint",
 		image: "projects/StudySprint.png",
-		details: "This project does amazing things using modern web technologies.",
-		stack: ["React", "Node.js", "Express", "MongoDB"],
+		details: "Dynamic quizzes tailored to your knowledge and preferences.",
+		stack: ["React 18", "Spring Boot", "axios", "H2"],
 		demoLink: "#",
 		repoLink: "https://github.com/IvanoskiHarmonia/quiz-service",
 	},
 	{
 		name: "3os",
 		image: "projects/3os.png",
-		details: "Academic Growth Through Digital Evolution",
-		stack: ["Web Flow"],
+		details: "Digital evolution for enhanced academic growth.",
+		stack: ["Web Flow", "Component-based", "UI/UX", "Salesforce"],
 		demoLink: "https://www.3os.com/",
 		repoLink: "https://github.com/Software-Engineering-1-Group-13/Bookstore-API",
 	},
 	{
 		name: "Adorned",
 		image: "projects/NoImage.jpg",
-		details:
-			"Bored of looking through your clothes to find what to wear tonight? look no more, install this app, upload your clothes and make combinations as easy as a simple tab on the pictures.",
-		stack: ["Node.js", "Express", "PostgreSQL"],
+		details: "App to organize and match your wardrobe easily.",
+		stack: ["Node.js", "Express", "PostgreSQL", "Bcrypt"],
 		demoLink: "#",
 		repoLink: "https://github.com/IvanoskiHarmonia/adorned",
 	},

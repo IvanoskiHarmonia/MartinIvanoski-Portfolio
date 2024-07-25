@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
 			sx={{
 				position: "relative",
 				width: "100%",
-				height: { xs: "40vh", sm: "30vh" },
+				height: { xs: "30vh", sm: "25vh" },
 				overflow: "hidden",
 				display: "flex",
 				flexDirection: { xs: "column", sm: "row" },
