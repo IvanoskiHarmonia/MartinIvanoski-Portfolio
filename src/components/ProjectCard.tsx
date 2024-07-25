@@ -50,7 +50,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }: { project: 
 					)}
 				</Box>
 				<Box sx={{ marginTop: 2 }}>
-					<Button variant="contained" color="primary" href={project.demoLink} disabled={project.demoLink === "#"}>
+					<Button
+						variant="contained"
+						color="primary"
+						href={project.demoLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						disabled={project.demoLink === "#"}
+					>
 						View Demo
 					</Button>
 					<Button variant="contained" sx={{ marginLeft: 1, px: 0 }} href={project.repoLink} target="_blank" rel="noopener noreferrer">

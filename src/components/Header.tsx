@@ -1,5 +1,19 @@
 import React from "react";
 import { Box, Avatar, Typography } from "@mui/material";
+import styled from "@emotion/styled";
+import "./Header.css";
+
+const TypingEffect = styled(Typography)({
+	overflow: "hidden",
+	borderRight: ".15em solid black",
+	whiteSpace: "nowrap",
+	margin: "0 auto",
+	letterSpacing: ".15em",
+	animation: `
+    typing 4.0s steps(45, end),
+    blink .75s step-end infinite
+  `,
+});
 
 export const Header: React.FC = () => {
 	return (
@@ -7,10 +21,10 @@ export const Header: React.FC = () => {
 			sx={{
 				position: "relative",
 				width: "100%",
-				height: { xs: "30vh", sm: "25vh" },
+				height: { xs: "20rem", md: "30vh" },
 				overflow: "hidden",
 				display: "flex",
-				flexDirection: { xs: "column", sm: "row" },
+				flexDirection: { xs: "column", md: "row" },
 				alignItems: "center",
 				justifyContent: "center",
 				padding: 2,
@@ -49,15 +63,15 @@ export const Header: React.FC = () => {
 					wordBreak: "break-word",
 				}}
 			>
-				<Typography
+				<TypingEffect
 					variant="h4"
-					component="h2"
 					sx={{
-						fontSize: { xs: "2.5rem", sm: "2rem", md: "4rem" },
+						fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" },
+						mt: { xs: 3, sm: 2, md: 0 },
 					}}
 				>
-					Software Developer
-				</Typography>
+					&lt;/Software Developer&gt;
+				</TypingEffect>
 			</Box>
 		</Box>
 	);

@@ -1,9 +1,10 @@
 import React from "react";
 import { Box } from "@mui/system";
+import { Container } from "@mui/material";
 
 export default function StyleWrapper({ children }: { children: React.ReactNode }) {
 	return (
-		<Box
+		<Container
 			sx={{
 				display: "flex",
 				flexDirection: "column",
@@ -11,6 +12,6 @@ export default function StyleWrapper({ children }: { children: React.ReactNode }
 			}}
 		>
 			{children}
-		</Box>
+		</Container>
 	);
 }
